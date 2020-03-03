@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang = "pl">
+    <head>
+        <link rel="stylesheet" href="strona.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title> Cookin' </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <nav class ="navbar">
+                <a href="#logo">Strona główna </a>
+                <a href="#about">O nas </a>
+                <div class = "dropdown">
+                    <button class = "dropdown-button"> Przepisy </button>
+                    <div class="dropdown-content">
+                        <a href="#wytrawne">Wytrawne</a>
+                        <a href="#Słodkie">Słodkie</a>
+                    </div>
+                </div>
+            </nav>
+            <h1 class="logo" id="logo">Cookin'...</h1>
+        </header>
+        <main>
+            <button class="add-button"><i class = "fa fa-bars"></i> </button>
+
+            <div class="form">
+                  <h1>Dodaj przepis</h1>
+                  <form action="post" id="form">
+                    <input
+                      type="text"
+                      placeholder="Nazwa przepisu"
+                      id="nazwa"
+                      required
+                      minlength="2"
+                      maxlength="25"
+                    />
+                    <p id="error-nazwa"></p>
+                    <input
+                      type="text"
+                      placeholder="Składniki (oddzielone przecinkiem)"
+                      id="skladniki"
+                      minlength="3"
+                      maxlength="60"
+                      required
+                    />
+          
+                    <p id="error-skladniki"></p>
+                    <input type="url" placeholder="Obraz URL" id="url1" required />
+                    <p id="error-url1"></p>
+          
+                    <textarea
+                      name=""
+                      cols="10"
+                      rows="4"
+                      placeholder="Opis przepisu (oddzielone '/' )"
+                      id="opis"
+                      required
+                      minlength="10"
+                      maxlength="200"
+                    ></textarea>
+                    <p id="error-opis"></p>
+          
+                    <button type="submit"id="submitBtn"><i class="fa fa-check"></i></button>
+                  </form>
+              </div>
+            <section class = "recipes">
+                <div class = " grid-container" id = "wytrawne">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button> 
+                    <img src="przepis1.jpg" alt="Bataty">
+                    <div>
+                        <h2 class = "nazwa">Pieczone bataty z fetą i granatem</h2>
+                        <h3>Przygotowanie:</h3>
+                        <ul>
+                            <li>Piekarnik nagrzać do 200 stopni C. Bataty umyć i każdego pokroić
+                                    wzdłuż na 4 plastry. Doprawić solą, pieprzem i natrzeć oliwą.</li>
+                            <li>Ułożyć w naczyniu żaroodpornym lub na blaszce (w razie potrzeby
+                                    wyłożyć ją papierem do pieczenia) i wstawić do piekarnika. Piec przez
+                                    ok. 45 minut lub do miękkości (widelec ma gładko wchodzić w
+                                    miąższ). Mniejsze bataty mogą być gotowe parę minut wcześniej.</li>
+                            <li>Rukolę umyć i osuszyć, następnie włożyć do pojemnika
+                                    rozdrabniacza lub melaksera, dodać obrany czosnek, papryczkę bez
+                                    pestek, orzechy, ser, oliwę i sok z cytryny. Doprawić solą i pieprzem i
+                                    wszystko zmiksować na małe kawałeczki składników. Jeśli nie mamy
+                                    melaksera, musimy siekać składniki na desce.</li>
+                            <li>Upieczone bataty posmarować pesto, posypać rozkruszoną fetą
+                                    oraz wyłuskanym granatem. W razie potrzeby doprawić solą i
+                                    pieprzem.</li>
+                        <h4>Składniki:</h4>
+                        <ul>
+                            <li>2 bataty</li>
+                            <li>sól, pieprz, oliwa</li>
+                            <li>80g fety</li>
+                            <li>1/2 owocu granatu</li>
+                            <li>125g rukoli</li>
+                            <li>1/2 ząbka czosnku</li>
+                            <li>1/2 papryczki chilli</li>
+                            <li>10 orzechów nerkowca</li>
+                            <li>20g parmezanu</li>
+                            <li>1/2 cytryny</li>
+                        </ul>
+                        </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class = " grid-container" id = "wytrawne">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button> 
+                    <img src="przepis2.jpg" alt = "cukinia">
+                    <div>
+                        <h2 class = "nazwa">Makaron zapiekany z cukinią i boczkiem</h2>
+                        <h3>Przygotowanie:</h3>
+                        <ul>
+                            <li>Makaron ugotować al dente w osolonej wodzie, odcedzić, włożyć z
+                                powrotem do garnka. Piekarnik nagrzać do 190 stopni C (jeśli danie
+                                będziemy dodatkowo zapiekać).</li>
+                            <li>Na dużej patelni na oliwie zeszklić pokrojonego pora. Dodać
+                                drobno starty czosnek a następnie boczek pokrojony w kostkę.</li>
+                            <li>Smażyć co chwilę mieszając przez ok. 5 minut, następnie dodać
+                                pokrojoną w kosteczkę cukinię i smażyć przez kolejne 5 minut.</li>
+                            <li>Dodać posiekaną natkę pietruszki oraz śmietankę. Zagotować,
+                                doprawić solą oraz pieprzem. Dodać makaron i wymieszać.</li>
+                            <li>Opcjonalnie danie można dodatkowo zapiec w piekarniku. W tym
+                                celu należy je przełożyć do naczynia żaroodpornego lub blaszki.
+                                Posypać tartym serem i zapiekać bez przykrycia przez ok. 10 minut.</li>
+                            <li>Jeśli dania nie zapiekamy, możemy posypać je serem już po
+                                nałożeniu na talerze.</li>
+                            <h4>Składniki:</h4>
+                                <ul>
+                                    <li>200g makaronu świderki</li>
+                                    <li>1 łyżka oliwy</li>
+                                    <li>200g wędzonego boczku</li>
+                                    <li>1 por</li>
+                                    <li>1 nieduża cebula</li>
+                                    <li>2 ząbki czosnku</li>
+                                    <li>2 łyżki posiekanej natki pietruazki</li>
+                                    <li>250ml śmietanki 30% z kartonika</li>
+                                    <li>3 łyżki tartego sera twardego typu corregio, parmezan, bursztyn</li>
+                                </ul>
+                        </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class = " grid-container" id = "wytrawne">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button>
+                    <img src = "przepis3.jpg" alt = "kurczak">
+                    <div>
+                        <h2 class = "nazwa">Makaron stir-fry z kurczakiem </h2>
+                        <h3>Przygotowanie:</h3>
+                        <ul>
+                            <li>Kurczaka pokroić na ok. 1,5 cm kawałki, doprawić solą, pieprzem i obtoczyć w mące ziemniaczanej. Makaron ugotować zgodnie z instrukcją na opakowaniu.</li>
+                            <li>W czasie gdy gotuje się makaron przygotować warzywa: cebulę obrać i pokroić w kosteczkę, czosnek obrać i pokroić na cienkie plasterki, marchewkę obrać i pokroić w słupki. Brokuła posiekać na mniejsze kawałki, papryczkę chili pokroić w kosteczkę.</li>
+                            <li>W woku lub na dużej patelni rozgrzać olej roślinny. Dodać cebulę oraz czosnek i podsmażać mieszając przez ok. 2 minuty. Dodać kurczaka i obsmażyć przez kolejne 2 minuty, doprawić solą i pieprzem.</li>
+                            <li>Dodać marchewkę, brokuła, papryczkę chili oraz orzechy jeśli ich używamy (można je zgrubnie posiekać). Smażyć wszystko przez ok. 4 minuty często mieszając. W międzyczasie wlewać po trochu mieszankę wody z sosem sojowym i cukrem.</li>
+                            <li>Dodać ugotowany makaron. Wymieszać i chwilę razem podsmażyć. Na koniec polać olejem sezamowym i wymieszać ze szczypiorkiem.</li>
+                            <h4>Składniki:</h4>
+                            <ul>
+                                <li>1 pojedynczy filet z kurczaka</li>
+                                <li>2 łyżeczki mąki ziemniaczanej</li>
+                                <li>100g makaronu pszennego chińskiego Mie lub Chow mein</li>
+                                <li>1/4 cebuli</li>
+                                <li>2 ząbki czosnku</li>
+                                <li>1/2 marchewki</li>
+                                <li>1/3 beokuła</li>
+                                <li>kawałek papryczi chilli</li>
+                                <li>2 łyżki oleju roślinnego</li>
+                                <li>3 łyżki orzechów nerkowca(opcjonalnie)</li>
+                                <li>1/4 szklanka wody</li>
+                                <li>3 łyżki sosu sojowego</li>
+                                <li>1/2 łyżeczki cukru trzcinowego</li>
+                                <li>1 łyżka oleju sezamowego</li>
+                                <li>4 łyżki posekanego szczypiorku</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class = " grid-container" id = "wytrawne">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button>
+                    <img src = "przepis4.jpg" alt = "tuńczyk">
+                    <div>
+                        <h2 class = "nazwa">Pasta z tuńczyka z chlebem</h2>
+                        <h3>Przygotowanie:</h3>
+                        <ul>
+                            <li>Wyjąć tuńczyka z zalewy lub oleju i włożyć do pojemnika
+                                rozdrabniacza lub mini melaksera, dodać miękkie masło lub serek,
+                                dodać </li>
+                            <li>Przełożyć masę do pojemniczka i wstawić do lodówki na około
+                                godzinę. Podawać do pieczywa, np. CHLEBA Z SUSZONYMI
+                                POMIDORAMI.</li>
+                                <h4>Składniki:</h4>
+                                <ul>
+                                    <li>140g tuńczyka z puszki, w oleju lub sosie własnym</li>
+                                    <li>50g miękkiego masła lub kremowego serka typu Philadelphia lub twarożku koziego lub mascarpone</li>
+                                    <li>3 fileciki anchovies</li>
+                                    <li>sól i pieprz do smaku</li>
+                                    <li>opcjonalnie: 1/3 ząbka czosnku</li>
+                                </ul>
+                        </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class = " grid-container" id = "wytrawne">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button>
+                    <img src = "przepis5.jpg" alt = "kurczak2">
+                    <div>
+                        <h2 class = "nazwa">Kurczak słodko-kwaśny</h2>
+                        <h3>Przygotowanie:</h3>
+                        <ul>
+                            <li>Paprykę pokroić w kosteczkę, marchewkę obrać i pokroić w
+                                    cienkie słupki. Ananasa obkroić ze skóry, pokroić na kawałki, wyciąć
+                                    głąba ze środka. Odłożyć potrzebną ilość ananasa i pokroić go na
+                                    cienkie plasterki.</li>
+                            <li>Piersi kurczaka pokroić w kosteczkę. Doprawić solą i wymieszać z
+                                    mąką ziemniaczaną, odłożyć.</li>
+                            <li>Imbir i czosnek zetrzeć na małej tarce. Ocet ryżowy wymieszać z
+                                    cukrem i 3 łyżkami wody, odstawić.</li> 
+                            <li>W woku lub na dużej patelni z nieprzywierającą powłoką
+                                    rozprowadzić olej. Włożyć kurczaka i obsmażać go z każdej strony co
+                                    chwilę mieszając (ok. 5 minut). Pod koniec dodać starty imbir,
+                                    czosnek i biały pieprz.</li> 
+                            <li>Dodać paprykę i marchewkę i co chwilę mieszając smażyć przez
+                                    ok. 3 minuty. Dodać ananasa, wymieszać i smażyć przez 2 minuty.</li>
+                            <li>Zwiększyć ogień i wlać ocet z wodą i cukrem, wymieszać i
+                                    zagotować. Gotować jeszcze przez około 2 minuty. Dodać ketchup,
+                                    wymieszać i gotować jeszcze przez 1 minutę</li> 
+                            <h4>Składniki</h4> 
+                                    <ul>
+                                        <li>350g piersi z kurczaka</li>
+                                        <li>1 czerwona papryka</li>
+                                        <li>1 marchewka</li>
+                                        <li>1/4 ananasa</li>
+                                        <li>1 łytżka mąki ziemniaczanej</li>
+                                        <li>2 łyżeczki startego świeżego imbiru</li>
+                                        <li>1 ząbek czosnku</li>
+                                        <li>1/4 szklanki octu ryżowego(ewentulanie soku z cytryny. limonki</li>
+                                        <li>4 łyżki cukru trzcinowego</li>
+                                        <li>szczypta zmielonego białego ryżu</li>
+                                        <li>1 łyżka oleju roślinnego</li>
+                                        <li>3 łyżki ketchupu</li>
+                                    </ul>                                                               
+                        </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class = " grid-container" id = "wytrawne">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button>
+                    <img src="przepis6.jpg" alt="Sushi">
+                    <div>
+                        <h2 class = "nazwa">Sushi z pieczonym łososiem teriyaki</h2>
+                        <h3>Przygotowanie:</h3>
+                        <ul>
+                            <li>Łososia opłukać i dokładnie osuszyć. Położyć skórką do dołu w małym naczyniu do zapiekania, sprawdzić czy filet nie ma ości. Wymieszać składniki marynaty i polać nią łososia. Przewrócić na drugą stronę skórką do góry i zostawić na godzinę. Piekarnik nagrzać do 190 stopni. Wstawić łososia i piec przez 16 minut. Wyjąć z piekarnika, po ostudzeniu zdjąć skórkę.</li>
+                            <li>Ugotować ryż do sushi zgodnie z instrukcją na opakowaniu. Najczęściej wygląda to tak: ryż wsypać do garnka i kilkakrotnie (około 7 razy) dokładnie wypłukać wodą z kranu, odcedzić, włożyć z powrotem do garnka, zalać zimną wodą (w takiej samej ilości jak ryżu, czyli u nas - 1 i 1/2 szklanki), dodać szczyptę soli i przykryć garnek. Zagotować, zmniejszyć ogień do minimum i gotować na wolnym ogniu przez 15 minut. W czasie gotowania nie otwierać garnka. Zdjąć z ognia i pozostawić na 5 minut pod przykryciem. Otworzyć, dodać zaprawę i wymieszać, przełożyć do czystej miski.</li>
+                            <li>Ogórka pokroić na półcentymetrowe prążki, awokado obrać i również pokroić. Sezam lekko zrumienić na patelni.</li>
+                            <li>Arkusz nori umieścić na środku maty bambusowej lub na zwykłej desce. Ułożyć warstwę ryżu (około pół szklanki) pozostawiając 1 cm wolny margines. Pośrodku, wzdłuż krótszego boku, położyć prążki ogórka lub awokado, przykryć kawałkami łososia, posmarować (opcjonalnie) majonezem wymieszanym z pozostałym sosem z pieczonego łososia.</li>
+                            <li>Zawinąć w taki sposób aby listki nori zamknęły składniki w środku rulonu, pozostawiając matę bambusową na zewnątrz (instrukcja zwijania sushi powinna być na każdym opakowaniu sushi nori, można też poszukać filmu instruktażowego w internecie).</li>
+                            <li>Przyciąć końce roladki, resztę pokroić na kilka części i ułożyć na talerzyku. Końcówki można też wykorzystać, można włożyć do środka "tatara" z łososia: część upieczonego łososia wymieszać z drobno posiekanym porem, szczypiorkiem, niewielką ilością soku z cytryny, posiekanym marynowanym imbirem i odrobiną majonezu.</li>
+                            <li>Sushi udekorować lekko zrumienionym sezamem, kolendrą lub kiełkami. Podawać z sosem sojowym, marynowanym imbirem i chrzanem wasabi. Sushi można też polać gęstym, zredukowanym sosem teriyaki pozostałym z pieczeni.</li>
+                            <h4>Składniki:</h4>  
+                            <ul>
+                                <li>200g filetu z łososia</li>
+                                <li>1 i 1/2 szklanki ryżu do sushi</li>
+                                <li>2 i 1/2 łyżki zaprawy (sosu) do ryżu (własnego lub gotowanego)</li>
+                                <li>1 paczka prasowanych alg, sushi nor</li>
+                                <li>kawałek zielonego ogórka lub awokado</li>
+                                <li>2 łyżki sezamu</li>
+                                <li>3 łyżki majonezu</li>
+                                <li>opcjonalnie, na "tatara": kawałek cieniutko pokrojonego pora, sok z cytryny, szczypiorek</li>
+                                <li><strong>teriyaki do łososia:</strong></li>  
+                                <li>3 łyżki sosu sojowego</li>
+                                <li>1 łyżka miodu syropu klonowego</li>
+                                <li>1 łyżka octu ryżowego lub soku z cytryny/limonki</li>
+                                <li>1 łyżeczka tartego korzenia imbiru</li>
+                                <li>1 łyżka mirinu lub sake (jeśli nie mamy można pominąć</li>
+                            </ul>          
+                        </ul>
+                        </div>
+                        <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class = " grid-container" id ="Słodkie">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button>
+                    <img src = "przepis7.jpg" alt = "Dutchbaby">
+                    <div>
+                        <h2 class = "nazwa">Dutch baby z jabłkami</h2>
+                        <h3>Przygotowanie:</h3>
+                        <ul>
+                            <li>Jajka ogrzać (np. włożyć do garnka z ciepłą wodą) lub wyjąć wcześniej z lodówki. Mleko delikatnie podgrzać lub ogrzać w temp. pokojowej.</li>
+                            <li>Piekarnik nagrzać do 220 stopni C, w środku piekarnika nagrzewać również naczynie żaroodporne lub patelnię żaroodporną czy inną formę np. na tartę, średnica ok. 20 cm.</li>
+                            <li>Sklarować 4 łyżki masła (podgrzać w rondelku, zebrać i usunąć pianę). Jabłko obrać, pokroić na 8 - 10 kawałków (plasterków).</li>
+                            <li>Do blendera (stojącego, z kielichem) wbić jajka, dodać mleko, mąkę, cukier wanilinowy i sól.</li>
+                            <li>Mieszankę składników z blendera krótko zmiksować (4 sekundy) na jednolitą masę.</li>
+                            <li>Wysunąć kratkę z rozgrzanym naczyniem z piekarnika, wlać 2 łyżki sklarowanego masła, następnie wlać powoli zmiksowane składniki na omlet. Rozłożyć kawałki jabłek i zamknąć piekarnik.</li>
+                            <li>Piec bez przykrycia przez ok. 20 minut, aż omlet miejscami urośnie i będzie dobrze zrumieniony oraz chrupiący.</li>
+                            <li>Wyjąć z piekarnika, posypać cynamonem. Podawać z resztą klarowanego masła i cukrem pudrem.</li>
+                            <h4>Składniki:</h4>
+                            <ul>
+                                <li>3 jajka</li>
+                                <li>1/2 szklanki mleka</li>
+                                <li>1/2 szklanki mąki pszennej</li>
+                                <li>1 łyżeczka cukru wanilinowego</li>
+                                <li>szczypta soli</li>
+                                <li>masło</li>
+                                <li> 1 jabło</li>
+                                <li>szczypta cynamonu</li>
+                                <li>cukier puder</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class =" grid-container" id = "Słodkie">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button>
+                    <img src = "przepis8.jpg" alt = "ciastka">
+                    <div>
+                        <h2 class = "nazwa">Ciasteczka z czekoladą</h2>
+                        <h3>Przygotowanie:</h3>
+                        <ul>
+                            <li>Piekarnik nagrzać do 160 stopni C. Przygotować dużą blachę (lub najlepiej 2 jeśli mamy), wyłożyć papierem do pieczenia.</li>
+                            <li>Mąkę przesiać do miski, dodać sól, sodę, wanilię i wymieszać. W drugiej misce ubijać masło z dodatkiem brązowego i białego cukru przez około 5 minut. Dodać jajko i ubijać jeszcze przez około 5 minut. Dodać sypkie składniki i zmiksować, dodać posiekaną czekoladę (każdą kosteczkę pokroić na 4 kawałeczki) i wymieszać dłonią lub łyżką.</li>
+                            <li>Nabierać po około 2 łyżki masy, formować kulki wielkości małej gałki lodów i układać na blaszce zachowując kilkucentymetrowe odstępy. Na jednej blaszce zmieści się nam około 9 kulek a z całej ilości masy ulepimy ich około 18 sztuk. Delikatnie - odrobinę, ok. pół centymetra - "uklepać", spłaszczyć palcami wierzch każdej kulki.</li>
+                            <li>Pierwszą blaszkę z ciastkami wstawić do piekarnika na półkę wyżej niż połowa piekarnika. Piec przez 14 - 15 minut, aż brzegi ciastek zaczną się rumienić. Ciastka wyjmujemy z piekarnika gdy są jeszcze miękkie, zastygają podczas studzenia. Na zewnątrz mają być chrupiące, w środku ciągnące. Upiec drugą partię ciastek.</li>
+                            <h4>Składniki:</h4>
+                            <ul>
+                                <li>100g masła</li>
+                                <li>1 szklanka mąki pszennej</li>
+                                <li>1/3 łyżeczki sody oczyszczonej lub proszku do pieczenie</li>
+                                <li>80g brązowego cukru</li>
+                                <li>80g białegoo cukru</li>
+                                <li>1 jajko</li>
+                                <li>2 łyżczki cukru wanilinowego</li>
+                                <li>300g czekolady</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class = " grid-container" id = "Słodkie">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button>
+                    <img src = "przepis9.jpg" alt = "ciastka">
+                    <div>
+                            <h2 class = "nazwa">Ciasteczka pełnoziarniste</h2>
+                            <h3>Przygotowanie:</h3>
+                            <ul>
+                                <li>Masło pokroić w kostkę i utrzeć (ubić mikserem) z miodem i cukrem pudrem (oraz tahini/ zmielonym sezamem jeśli używamy).</li>
+                                <li>Dodać mąkę wymieszaną z proszkiem do pieczenia, dokładnie wymieszać i uformować kulę. Odrywać po kawałeczki ciasta i lepić kuleczki nieco mniejsze od orzecha włoskiego.</li>
+                                <li>Ułożyć je na dużej blaszce wyścielonej papierem do pieczenia. Rozpłaszczyć palcami na grubość ok. 1 cm i odcisnąć wzorek widelcem.</li>
+                                <li>Piec w piekarniku nagrzanym do 180 stopni C przez ok. 10 - 12 minut. Po upieczeniu ciasteczka są jeszcze bardzo miękkie, sztywnieją po ostudzeniu.</li>
+                                <h4>Składniki:</h4>
+                                <ul>
+                                    <li>160g mąki pełnoziarnistej</li>
+                                    <li>100g masła</li>
+                                    <li>2 łyżki miodu</li>
+                                    <li>1/4 szklanki cukru pudru</li>
+                                    <li>1/2 łyżeczki proszku do pieczenia</li>
+                                </ul>
+                            </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class = " grid-container" id = "Słodkie">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button>
+                    <img src="przepis10.jpg" alt = "ciasteczka">
+                    <div>
+                        <h2 class = "nazwa">Ciastka z masłem orzechowym </h2>
+                        <h3>Przygotowanie:</h3>
+                        <ul>
+                            <li>Masło, masło orzechowe i jajko ocieplić w temperaturze pokojowej. Dużą blachę (np. z wyposażenia piekarnika) wyłożyć papierem do pieczenia. Piekarnik nagrzać do 175 stopni C.</li>
+                            <li>Do miski włożyć miękkie masło, masło orzechowe i cukier trzcinowy. Ubijać przez ok. 5 minut aż masa będzie jaśniejsza i bardziej puszysta. Dodać jajko, wanilię i ubijać jeszcze przez ok. 3 minuty.</li>
+                            <li>W oddzielnej misce wymieszać mąkę pszenną z sodą, proszkiem do pieczenia i solą. Mieszankę wsypać do ubitej masy i wymieszać łyżką lub krótko zmiksować na jednolitą masę. Dodać kropelki czekolady i delikatnie wymieszać.</li>
+                            <li>Wykładać na blaszkę z zachowaniem odstępów. Można wykładać masę za pomocą łyżki do lodów (1 łyżka) lub zwykłą łyżką stołową (2 łyżki), bez uklepywania masy, na blaszce masa ma mieć kształt półkuli lub kapelusza grzyba, podczas pieczenia rozejdzie się na boki.</li>
+                            <li>Wstawić do nagrzanego piekarnika i piec przez ok. 15 minut, aż na obrzeżach i na wierzchu ciasteczka będą już wypieczone, ale w środku będą jeszcze delikatnie miękkie. Dopiero po ostudzeniu bardziej stwardnieją i zastygną.</li>
+                            <h4>Składniki:</h4>
+                            <ul>
+                                <li>100g masła</li>
+                                <li> 120g masła orzechowego</li>
+                                <li>150g cukru trzcinowego</li>
+                                <li>1 jajko</li>
+                                <li>1 łyżeczka ekstakru wanilinowego</li>
+                                <li>170g mąki</li>
+                                <li>2/3 łyżeczki sody oczyszczonej</li>
+                                <li>2/3 łyżeczki proszku do pieczenia</li>
+                                <li>szczypta soli</li>
+                                <li>50g pokrojonej czekolady</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class = " grid-container" id = "Słodkie">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button>
+                    <img src="przepis11.jpg" alt = "pannacotta">
+                    <div>
+                            <h2 class = "nazwa">Panna Cotta z owocami</h2>
+                            <h3>Przygotowanie:</h3>
+                            <ul>
+                                <li>Żelatynę zalać 2 łyżkami zimnej wody i odstawić na 5 minut. Laskę wanilii przekroić wzdłuż na pół i łyżeczką wyskrobać ziarenka.</li>
+                                <li>Do rondelka wlać śmietankę kremową i mleko, dodać cukier, ziarenka wanilii wraz z przepołowioną laską lub ekstrakt z wanilii. Mieszając podgrzewać aż cukier się rozpuści.</li>
+                                <li>Następnie doprowadzić prawie do zagotowania, tzn. odstawić z ognia w momencie gdy przy brzegach garnka zacznie się gotować.</li>
+                                <li>Dodać rum i wino oraz namoczoną żelatynę, mieszać przez około minutę, aż cała żelatyna się rozpuści.</li>
+                                <li>Mieszankę wlać do 4 filiżanek (każda po 125 ml) lub 6 mniejszych naczynek. Odstawić do wystudzenia. Po ostudzeniu filiżanki przykryć kawałkiem folii i wstawić do lodówki do stężenia, na około 4 - 5 godzin, lub najlepiej na całą noc.</li>
+                                <li>Wyłożyć na talerzyk i podawać ze świeżymi owocami lub musem owocowym. Można też skropić syropem klonowym, posypać orzechami lub czekoladą.</li>
+                                <h4>Składniki:</h4>
+                                <ul>
+                                    <li>3 łyżeczki żelatyny w proszku</li>
+                                    <li>2 łyżeczki ekstraktu z wanilii</li>
+                                    <li>250ml śmietany kremówki 30%</li>
+                                    <li>250ml mleka</li>
+                                    <li>80g cukru</li>
+                                    <li>opcjonalnie: 1 łyżka białego rumu i 1 łyżka białego wina</li>
+                                    <li>owoce</li>
+                                </ul>
+                            </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+                <div class = " grid-container" id = "Słodkie">
+                    <button class="btn-remove"> <i class="fa fa-trash"></i> </button>
+                    <img src = "przepis12.jpg" alt = "pralinki">
+                    <div>
+                        <h2 class = "nazwa">Pralinki migdałowe</h2>
+                        <h3>Przygotowanie:</h3>
+                        <ul>
+                            <li>Do miski wsypać mąkę migdałową, dodać miód oraz olej i wymieszać ręką, ugnieść i - mocno dociskając - uformować kuleczki. Można też dodać pół łyżeczki soku z cytryny dla przełamania słodyczy.</li>
+                            <li>Obtoczyć w wiórkach lub maku lub mielonych migdałach.</li>
+                            <h4>Składniki:</h4>
+                            <ul>
+                                <li>1 szklanka mąki migdałowej</li>
+                                <li>2 łyżki miodu</li>
+                                <li>1 łyżeczka oleju arganowego</li>
+                                <li>opcjonalnie sok z cytryny</li>
+                                <li>wiórki kokosowe,maki,mielone migdały</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <button class="btn-show"> <i class="fa fa-arrow-down"></i> </button>
+                </div>
+            </section>
+            <article class = "about" id = "about">
+                    <div class = "text">
+                        <h2>O nas</h2>
+                        <p>Popularne powiedzenie "przez żołądek do serca" jest znane niejednemu Polakowi". Ten cel przyświecał właśnie w momentach gdy nasza strona powstawała. Żeby dzielić się jedzeniem, dzielić się miłością do smaku. 
+                            Komponowanie smaków jest dla nas niczym podróż w nieznane. Łączysz nowe elementy bo stworzyć coś unikatowego, coś co rozpali kubki smakowe do czerwoności! Czasem mały najmniejszy element może stanowić o niepowtarzalnym wręcz idealnym smaku nowego dania!</p>
+                    </div>
+                    <img src = "autor.jpg">
+             </article>
+        </main>
+        <footer>
+                <h1 class="logo2">Cookin'...</h1>
+                <div class="rules" id="rules">
+                    <p>© 2019 Cookin'  wszystkie prawa zastrzeżone
+                        Kopiowanie i rozpowszechnianie bez zgody Cookin' zabronione</p>
+                </div>
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                </ul>
+        </footer>
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk="
+        crossorigin="anonymous"
+      ></script>
+     
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+              <script src="strona.js"></script>
+          </div>
+    </body>
+
+</html>
